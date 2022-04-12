@@ -31,8 +31,11 @@ public class Main {
 
     }
     public static void marathone(Participant[] participants, Obstacles[] obstacles){
-        for (Participant participant : participants) {
-            for (Obstacles obstacle : obstacles) {
+        for (Obstacles obstacle : obstacles) {
+            for (Participant participant : participants) {
+                if (!(participant.getPath())){
+                    continue;
+                }
                 obstacle.overcome(participant);
             }
             System.out.println();

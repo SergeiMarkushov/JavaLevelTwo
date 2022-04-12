@@ -10,11 +10,7 @@ public class Treadmill implements Obstacles {
 
     @Override
     public void overcome(Participant participant) {
-            if(participant.run()>=distance){
-                System.out.println(participant.toString() + " runs the distance " + getDistance());
-            }else{
-                System.out.println(participant.toString() + " can't run the distance " + getDistance());
-            }
+        participant.run(distance);
     }
 
     public int getDistance() {
