@@ -1,5 +1,7 @@
 package Homework3;
 
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -11,8 +13,9 @@ public class Main {
         phoneBook.add("Ivanova", "89335678475");
         phoneBook.add("Petrov", "89565534324");
 
-        phoneBook.get("Fedorov");
-        System.out.println();
-        phoneBook.get("Petrov");
+        Set<String> surnames = phoneBook.allSurnames();
+        for (String surname : surnames) {
+            System.out.printf("%s got number %s %n", surname, phoneBook.get(surname));
+        }
     }
 }
