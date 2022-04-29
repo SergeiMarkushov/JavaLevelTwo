@@ -29,6 +29,7 @@ public class Server {
                         try {
                             socket.close();
                             server.close();
+                            System.exit(0);
                         }catch (IOException e){
                             System.out.println("GOODBYE");
                             e.printStackTrace();
@@ -44,6 +45,7 @@ public class Server {
                 if (message.startsWith("/end")) {
                     socket.close();
                     server.close();
+                    System.exit(0);
                     break;
                 }
                 System.out.println("Client: " + message);
@@ -55,5 +57,5 @@ public class Server {
             e.printStackTrace();
         }
 
-        }
+    }
     }

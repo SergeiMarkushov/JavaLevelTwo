@@ -23,8 +23,8 @@ public class Client {
                     if(message.startsWith("/end")){
                         try {
                             socket.close();
+                            System.exit(0);
                         } catch (IOException e) {
-                            System.out.println("GOODBYE!");
                             e.printStackTrace();
                         }
                     }
@@ -36,6 +36,7 @@ public class Client {
                 String message = sc.nextLine();
                 if(message.startsWith("/end")){
                     socket.close();
+                    System.exit(0);
                     break;
                 }
                 out.println(message);
